@@ -3,7 +3,11 @@ package com.wyb.Controller;
 import com.wyb.model.Commodity;
 import com.wyb.service.CommodityService;
 import io.swagger.annotations.Api;
+import java.io.IOException;
+import java.net.InetAddress;
 import java.util.List;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,10 +21,8 @@ public class Test {
   @Autowired
   private CommodityService commodityService;
 
-  @GetMapping("/list")
-  public String testBlock() {
-    return "限流方法测试，正常返回结果";
-  }
+
+
 
   @GetMapping("/save")
   public void testInsert() {
