@@ -1,10 +1,10 @@
-package com.wyb.Controller;
+package com;
 
+import com.wyb.util.StreamHelper;
+import com.wyb.util.StringHelper;
 import java.io.File;
 import java.io.FileOutputStream;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,10 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-
-import com.wyb.util.StreamHelper;
-import com.wyb.util.StringHelper;
-
 
 
 @Controller

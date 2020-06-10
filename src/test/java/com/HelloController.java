@@ -1,4 +1,4 @@
-//package com.wyb.Controller;
+package com;//package com.wyb.Controller;
 //
 //import java.io.BufferedReader;
 //import java.io.File;

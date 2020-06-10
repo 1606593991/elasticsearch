@@ -1,7 +1,6 @@
-package com.wyb.Controller;
+package com;
 
 import java.nio.charset.Charset;
-
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 

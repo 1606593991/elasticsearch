@@ -1,4 +1,4 @@
-//package cn.gov.gd.scheduler.task;
+package com;//package cn.gov.gd.scheduler.task;
 //
 //import java.util.HashMap;
 //import java.util.List;

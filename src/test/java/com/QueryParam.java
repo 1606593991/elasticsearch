@@ -1,4 +1,4 @@
-package com.wyb.Controller;
+package com;
 
 
 import com.alibaba.fastjson.JSON;

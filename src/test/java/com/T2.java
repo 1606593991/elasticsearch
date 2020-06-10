@@ -1,4 +1,4 @@
-package com.wyb.Controller;
+package com;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

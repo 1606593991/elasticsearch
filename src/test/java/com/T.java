@@ -1,4 +1,4 @@
-package com.wyb.Controller;
+package com;
 
 public class T{
 	public static void main(String[] args) throws Exception {
@@ -9,8 +9,8 @@ public class T{
 		System.out.println("decData:"+decData);
 
 		String timestamp=System.currentTimeMillis()/1000+"";
-	
-		
+
+
        Aec aec = Aec.getInstance(key);
        System.out.println(aec.encrytor(key));
        System.out.println(aec.decryptor("948824AEBAE596ECADA92FEC340C3456517097CC80A476BD8BFA13EE701BEB74"));

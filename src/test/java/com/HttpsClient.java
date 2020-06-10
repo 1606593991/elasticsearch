@@ -1,15 +1,23 @@
-package com.wyb.Controller;
+package com;
 
-import javax.net.ssl.*;
-
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.URL;
 import java.security.KeyStore;
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManagerFactory;
 
-/**
- * 双向SSL 认证
- */
-public class Test_httpsClient {
+public class HttpsClient {
 
     private final static String charset = "UTF-8";
 
@@ -17,25 +25,22 @@ public class Test_httpsClient {
      * 客户端证书设置
      */
     protected static String clientCertPwd="123456";// 客户端证书密码
-    protected static String clientCertPath="D:/a/xz_client.cer";
-    protected static String clientKeyType = "JKS";
+    protected static String clientCertPath="D:\\cert\\xz_client.cer";
+    protected  static String clientKeyType = "JKS";
     /**
      * 服务端证书设置
      */
-    protected static String trustCertPath="D:/a/fri_server.cer";
+    protected static String trustCertPath="D:\\cert\\fri_server.cer";
     protected static String truestCertPwd="123456";
     protected static String truestKeyType = "JKS";
 
-    private static SSLContext sslContext;
+    private static SSLContext sslContext=null;
 
-    public static void main(String[] args) {
-    	
-    	
-    	post("123123213","https://121.22.111.251:9008/api/collect/legal");
-    	
-    	
-    }
     
+    public static void main(String[] args) throws Exception {
+    	
+    	post("123123","https://121.22.111.251:9008/api/collect/legal");
+    }
     
 /**
 * post方法
@@ -114,7 +119,7 @@ public class Test_httpsClient {
                 e2.printStackTrace();
             }
         }
-        return null;
+        return "1111";
     }
 
     /**
@@ -210,4 +215,5 @@ public class Test_httpsClient {
     public void setClientKeyType(String clientKeyType) {
         this.clientKeyType = clientKeyType;
     }
+
 }
